@@ -1,0 +1,180 @@
+body{
+    /*width: 90rem, teljes képernyő 1920px vagy 1440*/
+
+    display: grid;
+    width: 90rem;
+    /*height: 242rem;*/
+    margin: 0 auto;
+    z-index: 0;
+
+    background-color: #151515;
+    color: #FFFF;
+
+    font-family: 'Space Grotesk', 'sans-serif';
+}
+
+
+
+h1{
+    font-family: 'Space Grotesk', 'sans-serif';
+    font-size: 5.5rem;
+    font-weight: 700;
+    letter-spacing: -2.5px;
+    margin: 0;
+    padding: 0;
+}
+
+
+h3{
+    font-family: 'Space Grotesk', 'sans-serif';
+    color:  #D9D9D9;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+
+}
+
+.body_wrapper{
+
+    width: 69.375rem;
+    margin-right: 10.3125rem;
+    margin-left: 10.3125rem;
+}
+
+.underline{
+    border-bottom: 4px solid #4EE1A0;
+    text-decoration: none;
+
+}
+
+.header{
+    display: flex;
+    height: 4.437rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    vertical-align: middle;
+}
+
+.header_name{
+    display: flex;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2rem;
+    letter-spacing: -0.444444px;
+    margin-top: 2.4375rem;
+    /* margin-left: 10.3125rem; */
+}
+
+
+
+.header_social_logo:hover{
+    fill: #4EE1A0;
+}
+
+.table_wrapper{
+    display: flex;
+    margin-top: 2.6875rem;
+    /* margin-right: 12rem; */
+    margin-bottom: auto;
+    z-index: 2;
+
+}
+
+.social_media_links_table{
+    border-spacing: 25px 0;
+}
+
+
+
+.hero_text_box{
+    width: 44.125rem;
+    position: absolute;
+    margin-top: 12.1875rem;
+    /* margin-left: 10.3125rem; */
+    padding: 0;
+}
+
+.hero_text_box::after{
+    content: url(assets/images/pattern-rings.svg);
+    position: absolute;
+    left: -265px;
+    top: -67px;
+}
+
+
+.welcome_h3{
+    margin-top: 2.6875rem;
+}
+
+
+.hero_pic{
+    display: flex;
+    width: 445px;
+    height: 720px;
+    align-items: center;
+    justify-content: center;
+    margin-top: -4.437rem;
+    /* margin-right: 10.3125rem; */
+    margin-left: auto;
+    z-index: -10;
+}
+
+.hero_text_box::before{
+    content: url(assets/images/pattern-circle.svg);
+    position: absolute;
+    top: 326px;
+    left: 37.53125rem; 
+    z-index: 2;
+}
+
+
+.btn{
+    display: inline-block;
+    position: absolute;
+    margin-top: 3.1875rem;
+    background-color: none;
+    color: #FFFF;
+    cursor: pointer;
+    text-decoration: none;
+
+    font-family: 'Space Grotesk', 'sans-serif';
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.625rem;
+    letter-spacing: 2.28571px;
+}
+
+.btn:hover{
+    color: #4EE1A0;
+    transition-duration: 0.4s;
+}
+
+
+.skills_grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    margin-top: 6.5rem;
+    /* margin-left: 10.3125rem;
+    margin-right: 10.3125rem; */
+    border-top: 1px solid lightgray;
+    padding-top: 4.5rem;
+
+}
+
+.Heading_L{
+    font-family: 'Space Grotesk';
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 56px;
+    letter-spacing: -1.5px;
+}
+
+.paragraph{
+    font-family: 'Space Grotesk';
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+
+}
+
