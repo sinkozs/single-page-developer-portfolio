@@ -1,8 +1,7 @@
 body{
     /*width: 90rem, teljes képernyő 1920px vagy 1440*/
-
-    display: grid;
     width: 90rem;
+    height: 2000px;
     /*height: 242rem;*/
     margin: 0 auto;
     z-index: 0;
@@ -32,6 +31,35 @@ h3{
     font-size: 1.125rem;
     line-height: 1.75rem;
 
+}
+
+.Heading_L{
+    font-family: 'Space Grotesk', 'sans-serif';
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 3.5rem;
+    letter-spacing: -1.5px;
+    margin: 0;
+    padding: 0;
+    
+    
+}
+
+.Heading_M{
+    font-family: 'Space Grotesk', 'sans-serif';
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    
+}
+.paragraph{
+    font-family: 'Space Grotesk', 'sans-serif';
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    margin-top: 0.875rem;
+    margin-bottom: 0;
+    
 }
 
 .body_wrapper{
@@ -130,7 +158,6 @@ h3{
 
 .btn{
     display: inline-block;
-    position: absolute;
     margin-top: 3.1875rem;
     background-color: none;
     color: #FFFF;
@@ -152,8 +179,10 @@ h3{
 
 .skills_grid{
     display: grid;
+    position: relative;
     grid-template-columns: repeat(3, 1fr);
-
+    grid-row-gap: 58px;
+    grid-column-gap: 30px;
     margin-top: 6.5rem;
     /* margin-left: 10.3125rem;
     margin-right: 10.3125rem; */
@@ -162,19 +191,37 @@ h3{
 
 }
 
-.Heading_L{
-    font-family: 'Space Grotesk';
-    font-weight: 700;
-    font-size: 3rem;
-    line-height: 56px;
-    letter-spacing: -1.5px;
+.skills_grid::before{
+    content: url(assets/images/pattern-rings.svg);
+    position: absolute;
+    top: 254px;
+    left: 984px;
+
 }
 
-.paragraph{
-    font-family: 'Space Grotesk';
-    font-weight: 500;
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+.projects_grid_header{
+    max-width: 69.375rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    vertical-align: middle;
+    margin-top: 8.5625rem;
+    margin-bottom: 5rem;
 
+}
+
+
+.projects_grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1.875rem;
+    grid-row-gap: 4.3125rem;
+
+}
+
+.projects_img{
+    width: 540px;
+    height: 400px;
+    
 }
 
