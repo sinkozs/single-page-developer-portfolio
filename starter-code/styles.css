@@ -51,6 +51,10 @@ h3{
     font-weight: 700;
     font-size: 1.5rem;
     line-height: 2rem;
+    margin: 0;
+    padding: 0;
+    margin-top: 1.25rem;
+    margin-bottom: 0.4375rem;
     
 }
 .paragraph{
@@ -58,6 +62,10 @@ h3{
     font-weight: 500;
     font-size: 1.125rem;
     line-height: 1.75rem;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    padding-right: 1.125rem;
 
 
     
@@ -182,6 +190,7 @@ h3{
     border: none;
     border-bottom: 2px solid #4EE1A0;
 
+
     font-family: 'Space Grotesk', 'sans-serif';
     font-weight: 700;
     font-size: 1rem;
@@ -196,6 +205,10 @@ h3{
     transition-duration: 0.4s;
 }
 
+.btn_project{
+    margin: 0;
+    margin-top: 48px;
+}
 
 .skills_grid{
     display: grid;
@@ -261,12 +274,22 @@ h3{
     height: 400px;
 }
 
+.project_text{
+    position: relative;
+}
+
+
 .project_image_container{
-    position: absolute;
+    position: relative;
     width: 540px;
     height: 400px;
 }
 
+
+.project_image_container:hover .overlay{
+    opacity: 0.8;
+
+}
 
 .overlay{
     position: absolute;
@@ -293,10 +316,7 @@ h3{
 
 
 
-.project_image_container:hover .overlay{
-    opacity: 0.8;
 
-}
 
 
 .footer{
