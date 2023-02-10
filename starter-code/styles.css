@@ -1,14 +1,10 @@
 body{
     /*width: 90rem, teljes képernyő 1920px vagy 1440*/
     width: 90rem;
-    height: 2000px;
-    /*height: 242rem;*/
     margin: 0 auto;
     z-index: 0;
-
     background-color: #151515;
     color: #FFFF;
-
     font-family: 'Space Grotesk', 'sans-serif';
 }
 
@@ -30,8 +26,13 @@ h3{
     font-weight: 500;
     font-size: 1.125rem;
     line-height: 1.75rem;
+    z-index: 10;
 
 }
+
+/* .Heading_XL{
+    display: inline-block;
+} */
 
 .Heading_L{
     font-family: 'Space Grotesk', 'sans-serif';
@@ -57,16 +58,9 @@ h3{
     font-weight: 500;
     font-size: 1.125rem;
     line-height: 1.75rem;
-    margin-top: 0.875rem;
-    margin-bottom: 0;
+
+
     
-}
-
-.body_wrapper{
-
-    width: 69.375rem;
-    margin-right: 10.3125rem;
-    margin-left: 10.3125rem;
 }
 
 .underline{
@@ -75,12 +69,32 @@ h3{
 
 }
 
+.wrapper{
+    width: 90rem;
+}
+
+.body_wrapper{
+    width: 69.375rem;
+    margin: auto;
+
+/*     margin-right: 10.3125rem;
+    margin-left: 10.3125rem; */
+
+
+}
+
+/* .underline{
+    border-bottom: 4px solid #4EE1A0;
+    text-decoration: none;
+
+} */
+
 .header{
     display: flex;
     height: 4.437rem;
-    flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
-    vertical-align: middle;
+
 }
 
 .header_name{
@@ -132,6 +146,7 @@ h3{
 
 .welcome_h3{
     margin-top: 2.6875rem;
+    margin-bottom: 4.125rem;
 }
 
 
@@ -158,11 +173,14 @@ h3{
 
 .btn{
     display: inline-block;
-    margin-top: 3.1875rem;
     background-color: none;
     color: #FFFF;
+    padding: 0;
+    padding-bottom: 0.625rem;
     cursor: pointer;
     text-decoration: none;
+    border: none;
+    border-bottom: 2px solid #4EE1A0;
 
     font-family: 'Space Grotesk', 'sans-serif';
     font-weight: 700;
@@ -170,6 +188,8 @@ h3{
     line-height: 1.625rem;
     letter-spacing: 2.28571px;
 }
+
+
 
 .btn:hover{
     color: #4EE1A0;
@@ -200,14 +220,20 @@ h3{
 }
 
 .projects_grid_header{
-    max-width: 69.375rem;
+
     display: flex;
-    flex-wrap: wrap;
+    max-width: 69.375rem;
+    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
-    vertical-align: middle;
+
     margin-top: 8.5625rem;
     margin-bottom: 5rem;
 
+}
+
+.header_p{
+    text-align: center;
 }
 
 
@@ -219,9 +245,63 @@ h3{
 
 }
 
+.projects_grid_text{
+    position: relative;
+    top: 405px;
+}
+
+.project_paragraph{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
 .projects_img{
     width: 540px;
     height: 400px;
-    
+}
+
+.project_image_container{
+    position: absolute;
+    width: 540px;
+    height: 400px;
+}
+
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    background: #151515;
+    cursor: pointer;
+}
+
+
+.overlay_content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #FFFF;
+    z-index: 10;
+}
+
+
+
+.project_image_container:hover .overlay{
+    opacity: 0.8;
+
+}
+
+
+.footer{
+    background-color: #242424;
+    height: 42.1875rem;
+    margin-top: 8.6875rem;
 }
 
