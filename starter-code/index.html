@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="styles.css">
   
   <title>Frontend Mentor | Single-page developer portfolio</title>
+  
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script defer src="form.js" charset="utf-8"></script>
 </head>
 
@@ -316,29 +318,33 @@
                 </p>
             </div>
         
-            <div class="form_container">
-                <form id="form" action="/">
-                    <div class="input_control">
-                        <label for="username">NAME</label>
-                        <input id="username" name="username" type="text" required>
-                        <div class="error"></div>
+            <div id="form_container">
+                <div class="input_control">                       
+                    <input id="username" name="username" class="form_input" type="text" placeholder="NAME" autocomplete="username" required>
+                    <div class="form_small">
+                        <label class="label_username" for="username">NAME</label>
+                        <small class="error"></small>
                     </div>
+                </div>
 
-                    <div class="input_control">
-                        <label for="email">EMAIL</label>
-                        <input id="email" name="email" type="text" required>
-                        <div class="error"></div>
+                <div class="input_control">
+                    <input id="email" name="email" class="form_input" type="text" placeholder="EMAIL" autocomplete="email" required>
+                    <div class="form_small">
+                        <label class="label_email" for="email">EMAIL</label>
+                        <small class="error"></small>
                     </div>
+                </div>
 
-                    <div class="input_control">
-                        <label for="message">MESSAGE</label>
-                        <textarea id="message" name="message" type="text" required></textarea>
-                        <div class="error"></div>
+                <div class="input_control">
+                    <textarea id="message" name="message" class="form_input" type="text" placeholder="MESSAGE" rows="4" required></textarea>
+                    <div class="form_small">
+                        <label class="label_message" for="message">MESSAGE</label>
+                        <small class="error"></small>
                     </div>
-
-                    <button class="btn form_btn" type="submit">SEND MESSAGE</button>
-                </form>
+                </div>
+                <button class="btn form_btn" type="submit">SEND MESSAGE</button>
             </div>
+
     
             <div class="footer_copyright">
                 <div class="header_name">adamkeyes</div>

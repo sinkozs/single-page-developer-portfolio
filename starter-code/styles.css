@@ -328,17 +328,18 @@ body{
     border: none;
     border-top: 2px solid lightgray;
     margin: 0;
+    margin-bottom:5.75rem;
     padding: 0;
     padding-top: 2.9375rem;
     margin-top: 5.75rem;
     justify-content: space-between;
 }
 
-.form_container{
+#form_container{
     width: 27.8125rem;
-    height: 20.4375rem;
-    background-color: none;
-
+    height: auto;
+    background: transparent;
+    
 }
 
 
@@ -347,65 +348,89 @@ body{
     flex-direction: column;
     margin-bottom: 2rem;
     padding-bottom: 1rem;
-    
+
+}
+
+.form_small{
+    display: flex;
+    justify-content: space-between;
     font-family: 'Space Grotesk', 'sans-serif';
     color: #FFFF;
-    font-size: 1rem;
     font-weight: 500;
     line-height: 1.625rem;
-    letter-spacing: -0.22px;
-    mix-blend-mode: normal;
+    letter-spacing: 0.1rem;
+    opacity: 1;
+}
+
+
+
+.input_control label{
+    visibility: hidden;
+    display: flex;
+    font-size: 1rem;
+    margin-left: 1rem;
+    margin-top: 0.6rem;
     opacity: 0.5;
 }
 
-.input_control input{
+
+.input_control input, textarea{
+    font-family: 'Space Grotesk', 'sans-serif';
+    color: #FFFF;
+    opacity: 1;
+    font-size: 1rem;
     border: none;
     border-bottom: 1px solid hsl(0,0%,100%);
     background-color: transparent;
-    display: block;
+
+    padding-left: 1rem;
+    padding-bottom: 1rem;
     
 }
 
+
+.input_control input:focus, textarea:focus{
+
+    outline: 0;
+    
+}
 
 .input_control.success input{
     border-color: #4EE1A0;
 } 
 
+.input_control.error{
+    position: relative;
+    display: flex;
+    margin-left: auto;
+
+}
 
 .input_control.error input{
-    border-color: #FF6F5B;
+    border-color: #FF6F5B; 
+
 }
 
-.input_control textarea{
-    border: none;
-    border-bottom: 1px solid hsl(0,0%,100%);
-    background-color: transparent;
-    display: block;
-    padding: 0;
-    margin: 0;
-
-
-    font-family: 'Space Grotesk', 'sans-serif';
-    color: #FFFF;
+.input_control.error::before{
+    content: "!";
+    position: absolute;
+    left: 25.4125rem;
+    width: 1.5rem;
+    height: 1.5rem;
     font-size: 1rem;
-    font-weight: 500;
-    line-height: 1.625rem;
-    letter-spacing: -0.22px;
-    mix-blend-mode: normal;
-    opacity: 0.5;
+    border-radius: 50%;
+    outline: 1px solid #FF6F5B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 
-.input_control textarea:focus{
-    outline: 0;
-}
 
-.input_control.success textarea{
-    border-color: #4EE1A0;
-} 
-
-
-.input_control.error textarea{
-    border-color: #FF6F5B;
+small{
+    display: flex;
+    align-items: center;
+    margin-top: 0.6rem;
 }
 
 
@@ -414,7 +439,7 @@ body{
     background-color: transparent;
     margin-top: 2rem;
     margin-left: auto;
-
+    
 }
 
 

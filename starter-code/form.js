@@ -1,4 +1,4 @@
-const form = document.getElementById('form');
+const form = document.getElementById('form_container');
 const username = document.getElementById('username');
 const email = document.getElementById('email');
 const message = document.getElementById('message');
@@ -9,13 +9,20 @@ form.addEventListener('submit', e => {
 });
 
 
+
 const set_error = (element, message) => {
     const input_control = element.parentElement;
     const error_display = input_control.querySelector('.error');
 
-    error_display.innerText = message;
+    error_display.innerText = message; 
+    
+       
     input_control.classList.add('error');
     input_control.classList.remove('success');
+
+    $(".error").css("color", "#FF6F5B");
+    
+    
 };
 
 const set_success = element => {
@@ -34,25 +41,61 @@ const validate_email = email =>{
     return re.test(String(email).toLowerCase());
 };
 
+const validate_username = username =>{
+    const re = /^[a-zA-Z]+$/;
+    return re.test(String(username));
+}
+
+
+ username.addEventListener("input", function(){
+    const username_value = username.value.trim();
+    $(".label_username").css("visibility", "visible");
+    if(username_value === '' || validate_username(username_value) === false){
+        set_error(username, 'Sorry, invalid format here');
+    }
+    else{
+        set_success(username);
+    }
+ });
+
+
+ email.addEventListener("input", function(){
+    const email_value = email.value.trim();
+    $(".label_email").css("visibility", "visible");
+    if(email_value === '' || validate_email(email_value) === false){
+        set_error(email, 'Sorry, invalid format here');
+    }
+
+    else{
+        set_success(email);
+    }
+
+
+ });
+
+
+ message.addEventListener("input", function(){
+    const message_value = message.value.trim();
+    $(".label_message").css("visibility", "visible");
+    if(message_value === ''){
+        set_error(message, "Please add message");
+    }
+    else{
+        set_success(email);
+    }
+ });
+
 
 const validate_inputs = () => {
     const username_value = username.value.trim();
     const email_value = email.value.trim();
     const message_value = message.value.trim();
 
-    if(username_value === ''){
-            set_error(username, 'Sorry, invalid format here');
-    }
-    else{
-        set_success(username);
+
+    if(email_value === '' || validate_email(email_value) === false){
+        set_error(email, 'Sorry, invalid format here');
     }
 
-    if(email_value === ''){
-        set_error(email, 'Sorry, invalid format here');
-    }
-    else if(!validate_email(email_value)){
-        set_error(email, 'Sorry, invalid format here');
-    }
     else{
         set_success(email);
     }
@@ -64,3 +107,4 @@ const validate_inputs = () => {
     set_success(message);
     }
 };
+
