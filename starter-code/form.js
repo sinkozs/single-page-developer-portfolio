@@ -3,11 +3,11 @@ const username = document.getElementById('username');
 const email = document.getElementById('email');
 const message = document.getElementById('message');
 
+
 form.addEventListener('submit', e => {
     e.preventDefault();
     validate_inputs();
 });
-
 
 
 const set_error = (element, message) => {
@@ -21,9 +21,8 @@ const set_error = (element, message) => {
     input_control.classList.remove('success');
 
     $(".error").css("color", "#FF6F5B");
-    
-    
 };
+
 
 const set_success = element => {
     const input_control = element.parentElement;
@@ -42,9 +41,9 @@ const validate_email = email =>{
 };
 
 const validate_username = username =>{
-    const re = /^[a-zA-Z]+$/;
+    const re = /^[ a-zA-ZÁáÉéÍíÓóÖöŐőÜüŰűÚú'-]+$/;
     return re.test(String(username));
-}
+};
 
 
  username.addEventListener("input", function(){
@@ -69,8 +68,6 @@ const validate_username = username =>{
     else{
         set_success(email);
     }
-
-
  });
 
 
@@ -80,31 +77,13 @@ const validate_username = username =>{
     if(message_value === ''){
         set_error(message, "Please add message");
     }
+    else if(message_value.length > 20){
+        set_error(message, "Message is too long (max 200 chars)");
+    }
     else{
         set_success(email);
     }
  });
 
 
-const validate_inputs = () => {
-    const username_value = username.value.trim();
-    const email_value = email.value.trim();
-    const message_value = message.value.trim();
-
-
-    if(email_value === '' || validate_email(email_value) === false){
-        set_error(email, 'Sorry, invalid format here');
-    }
-
-    else{
-        set_success(email);
-    }
-
-    if(message_value === ''){
-        set_error(message, 'Sorry, invalid format here');
-    }
-    else{
-    set_success(message);
-    }
-};
 
