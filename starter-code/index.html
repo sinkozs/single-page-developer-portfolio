@@ -318,32 +318,34 @@
             </div>
         
             <div id="form_container">
-                <div class="input_control">                       
-                    <input id="username" name="username" class="form_input" type="text" placeholder="NAME" autocomplete="username" required>
-                    <div class="form_small">
-                        <label class="label_username" for="username">NAME</label>
-                        <small class="error"></small>
+                <form id="form" action="/">
+                    <div class="input_control">                       
+                        <input id="username" name="username" class="form_input" type="text" placeholder="NAME" autocomplete="username" required>
+                        <div class="form_small">
+                            <label class="label_username" for="username">NAME</label>
+                            <small class="error"></small>
+                        </div>
                     </div>
-                </div>
-
-                <div class="input_control">
-                    <input id="email" name="email" class="form_input" type="text" placeholder="EMAIL" autocomplete="email" required>
-                    <div class="form_small">
-                        <label class="label_email" for="email">EMAIL</label>
-                        <small class="error"></small>
+    
+                    <div class="input_control">
+                        <input id="email" name="email" class="form_input" type="text" placeholder="EMAIL" autocomplete="email" required>
+                        <div class="form_small">
+                            <label class="label_email" for="email">EMAIL</label>
+                            <small class="error"></small>
+                        </div>
                     </div>
-                </div>
-
-                <div class="input_control">
-                    <textarea id="message" name="message" class="form_input" type="text" placeholder="MESSAGE" rows="4" required></textarea>
-                    <div class="form_small">
-                        <label class="label_message" for="message">MESSAGE</label>
-                        <small class="error"></small>
+    
+                    <div class="input_control">
+                        <textarea id="message" name="message" class="form_input" type="text" placeholder="MESSAGE" rows="4" required></textarea>
+                        <div class="form_small">
+                            <label class="label_message" for="message">MESSAGE</label>
+                            <small class="error"></small>
+                        </div>
                     </div>
-                </div>
-                <button class="btn form_btn" type="submit">SEND MESSAGE</button>
+                    <button class="btn" id="form_btn" type="submit">SEND MESSAGE</button>
+                </form>
             </div>
-
+                
             <div class="footer_copyright">
                 <div class="header_name"><a href="#">adamkeyes</a></div>
     

@@ -1,10 +1,10 @@
-const form = document.getElementById('form_container');
+const form = document.getElementById('form');
 const username = document.getElementById('username');
 const email = document.getElementById('email');
 const message = document.getElementById('message');
 
 
-form.addEventListener('submit', e => {
+form.addEventListener("submit", e => {
     e.preventDefault();
     validate_inputs();
 });
@@ -77,7 +77,7 @@ const validate_username = username =>{
     if(message_value === ''){
         set_error(message, "Please add message");
     }
-    else if(message_value.length > 20){
+    else if(message_value.length > 200){
         set_error(message, "Message is too long (max 200 chars)");
     }
     else{
@@ -86,4 +86,43 @@ const validate_username = username =>{
  });
 
 
+ const validate_inputs = () => {
+    const username_value = username.value.trim();
+    const email_value = email.value.trim();
+    const message_value = message.value.trim();
+
+    if(username_value === ''){
+        set_error(username, "Please add a username");
+    }
+
+    else if(validate_username === false){
+            set_error(username, "Sorry, invalid format here");
+    }
+
+    else{
+        set_success(username);
+    }
+
+    if(email_value === ''){
+        set_error(email, "Please add an email");
+    }
+    else if(!validate_email(email_value)){
+        set_error(email, "Sorry, invalid format here");
+    }
+    else{
+        set_success(email);
+    }
+
+    if(message_value === ''){
+        set_error(message, "Please add a message");
+    }
+
+    else if(message_value.length > 200){
+        set_error(message, "Message is too long (max 200 chars)")
+    }
+    
+    else{
+        set_success(message);
+    }
+};
 
